@@ -18,5 +18,5 @@ Welcome to my web development portfolio. Below are links to various projects I'v
 |[Homework 2](https://github.ncsu.edu/engr-csc342/2024Spring-Course/blob/main/Homework/Homework2.md)|
 |[Homework3](https://github.ncsu.edu/engr-csc342/2024Spring-Course/blob/main/Homework/Homework3.md)|
 |[Homework4](https://github.ncsu.edu/engr-csc342/2024Spring-Course/blob/main/Homework/Homework4.md)|
-|[Homework4](https://github.ncsu.edu/engr-csc342/2024Spring-Course/blob/main/Homework/Homework5.md)|
+|[Homework5](https://github.ncsu.edu/engr-csc342/2024Spring-Course/blob/main/Homework/Homework5.md)|
  
