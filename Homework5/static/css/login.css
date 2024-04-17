@@ -1,0 +1,42 @@
+.container{
+    margin-top: 100px ;
+    border: 1px solid black;
+    padding-bottom: 80px;
+    padding-top: 50px;
+}
+
+header{
+    background-color: aqua;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    
+    height: 60px;
+}
+
+h3 {
+    margin-left: 420px;
+}
+
+#errorbox {
+    background-color: #debaba;
+    border: 1px solid #db7d7d;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+#errorbox.hidden {
+    visibility: hidden;
+}
+
+#loginButton {
+    /* make it bigger and change its color */
+    
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+
+}

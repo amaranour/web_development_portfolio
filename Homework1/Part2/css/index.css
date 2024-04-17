@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Layout */
+  aside.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  section {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  body {
+    display: flex;
+  }
+  
+  /* Layout for the header to fit next to the sidebar */
+header.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: pink;
+    padding: 10px;
+    
+  }
+  
+  /* Left section of the header */
+  #leftSection {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between items */
+  }
+  
+  /* Right section of the header */
+  #rightSection {
+    
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between items */
+  }
+  
+  /* Styles for dropdowns and buttons in the right section */
+  #rightSection > div {
+    position: relative;
+  }
+  
+  #rightSection button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #rightSection div[tabindex="-1"] {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: none;
+  }
+  
+  #rightSection button:focus + div[tabindex="-1"],
+  #rightSection button:hover + div[tabindex="-1"] {
+    display: block;
+  }
+  
+  /* Adjust layout for smaller screens */
+  @media (max-width: 768px) {
+    header.header {
+      flex-direction: column;
+      margin-left: 0;
+    }
+  
+    #leftSection, #rightSection {
+      justify-content: center;
+    }
+  }
+  
+  
+  /* Navigation Menu */
+  /* Main Navigation Link Styles */
+.nav-menu a {
+    display: block;
+    color: red;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    background-color: #444;
+  }
+  
+  /* Sublink Section under UI Features */
+  .nav-menu > div > div {
+    display: none;
+    padding-left: 20px; /* Indentation for sublinks */
+  }
+  
+  .nav-menu > div:hover > div {
+    display: block;
+  }
+  
+  /* Sublink Styles */
+  .nav-menu > div > div a {
+    font-size: 0.9em;
+    color: #ddd;
+  }
+  
+  .nav-menu > div > div a:hover {
+    color: #fff;
+  }
+  
+  /* Separation between main links and sublinks */
+  .nav-menu > div:not(:last-child) {
+    border-bottom: 1px solid #555;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+  
+  
+  /* Sidebar Footer */
+  .sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 40px);
+  }
+  
+  .sidebar-footer a {
+    color: blue;
+    text-decoration: none;
+    
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+  
+    aside.sidebar {
+      height: auto;
+      width: 100%;
+    }
+  
+    section {
+      flex-grow: 0;
+    }
+  }
+
+/* Info Boxes Styling */
+.main-content > div:first-child {
+    display: flex; /* Flexbox for info boxes */
+    justify-content: space-between; /* Evenly spaces info boxes */
+    margin-bottom: 20px; /* Margin below info boxes */
+}
+
+.main-content > div:first-child > div {
+    background-color: white; /* White background for info boxes */
+    padding: 20px; /* Padding inside info boxes */
+    width: 23%; /* Width of each info box */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2); /* Box shadow for depth */
+}
+
+/* Card Styling */
+.card {
+    background-color: white; /* White background for cards */
+    padding: 20px; /* Padding inside cards */
+    margin-bottom: 20px; /* Margin below each card */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2); /* Box shadow for depth */
+}
+
+.card img {
+    width: 100%; /* Full width for images in cards */
+    height: auto; /* Auto height to maintain aspect ratio */
+    object-fit: contain;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .header, .main-content {
+        margin-left: 0; /* No margin on smaller screens */
+    }
+
+    .header {
+        width: 100%; /* Full width for header */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for sidebar on smaller screens */
+        position: relative; /* Relative position for sidebar */
+    }
+
+    .main-content {
+        padding-top: 60px; /* Adjust padding to account for header height */
+    }
+}

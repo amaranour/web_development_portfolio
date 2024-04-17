@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/form.css">
+    <title> Pay your friends</title>
+</head>
+<body>
+    <form action="/send" method="post" enctype="multipart/form-data">
+        <fieldset class="sender-details">
+            <h2>Sender Details </h2>
+            <div>
+                <img id = "preview" >
+                <br>
+                <input id = "imginput" name = "myfile" type = "file" accept = "image/*" >
+            </div>
+            
+            <div>
+                <label for="sender_firstname">First Name:</label> <br>
+                <input type="text" name="sender_firstname" id="sender_firstname" required>
+                <br>
+                <label for="sender_lastname">Last Name:</label> <br>
+                <input type="text" name="sender_lastname" id="sender_lastname" required>
+            </div>
+            
+        </fieldset> <br>
+        
+        <fieldset class="recipient-details">
+            <h2>Recipient Details </h2>
+            <label for="recipient_firstname">First Name:</label> <br>
+            <input type="text" name="recipient_firstname" id="recipient_firstname" required>
+            <br>
+            <label for="recipient_lastname">Last Name:</label> <br>
+            <input type="text" name="recipient_lastname" id="recipient_lastname" required> <br>
+            <label for ="story">Message</label> <br>
+            <textarea id="story" name="message" required minlength="10" placeholder="Enter a text to the recipient" > </textarea>
+            <br>
+            
+        
+            <label>Notify Recipient:
+                <div>
+                    <input type="radio" id="email" name="notify" value="email"  />
+                    <label for="email">Email</label>
+                </div>
+            
+                <div>
+                    <input type="radio" id="sms" name="notify" value="sms" />
+                    <label for="sms">SMS</label>
+                </div>
+            
+                <div>
+                    <input type="radio" id="do_not_notify" name="notify" value="do_not_notify" />
+                    <label for="do_not_notify">Do not notify</label>
+                </div>
+            </label>  
+
+            <label for="email_input">Email:</label> <br>
+            <input type="email" name ="email" id="email_input" >
+            <br>
+            <label for="phone_number">Phone Number:</label> <br>
+            <input type="tel" name="phone" id="phone_number"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"> <br>
+
+        </fieldset>
+        <br>
+        <fieldset class="payment-details">
+            <h2>Payment Details </h2>
+            <div>
+                <label for="card_type">Card Type:</label> <br>
+                <select name="card_type" id="card_type" required>
+                    <option value="visa">Visa</option>
+                </select> <br>
+            </div>
+            <div>
+                <label for="card_number">Card Number:</label> <br>
+                <input type="text" name="card_number" id="card_number" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required> <br>
+            </div>
+            <div>
+                <label for="expiration_date">Expiration:</label> <br>
+                <input type="date" name="expiration_date" id="expiration_date" min="<?php echo date('Y-m-d'); ?>" required> <br>
+            </div>
+            <div>
+                <label for="ccv">CCV:</label> <br>
+                <input type="password" name="ccv" id="ccv" pattern="[0-9]{3,4}" required> <br>
+            </div>
+            <div>
+                <label for="amount">Amount($):</label> <br>
+                <input type="number" name="amount" id="amount" step="0.01" required> <br>
+            </div>
+            <div>
+              <input type="checkbox" id="terms" name="terms" required> 
+              <label for="terms">I agree to the Terms and Conditions</label>
+            </div>
+           
+            
+        </fieldset>
+
+        <input type="submit" value="Send">
+          
+
+    </form>
+  
+  
+    <script defer src="../js/form.js"></script>
+</body>
+</html>

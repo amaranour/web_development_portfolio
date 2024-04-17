@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning Example</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      position: relative;
+    }
+
+    a[href="#top"] {
+      display: block;
+      text-align: right;
+    }
+
+    header img {
+      max-width: 120px;
+    }
+
+    header ul {
+      margin : 0;
+      padding: 0;
+    }
+
+     header li {
+      display: inline-block;
+      position: relative;
+      padding: 10px 5px;
+    }
+
+    header li:hover {
+      background-color: #AAA;
+      cursor: pointer;
+    }
+
+    header li ul {
+      background-color: #FFF;
+      border: 1px solid black;
+      position: absolute;
+      left: 5px;
+      top: 100%;
+      min-width: 150px;
+      display: none;
+    }
+
+    header li ul li {
+      display: block;
+    }
+
+    header li:hover>ul {
+      display: block;
+    }  
+
+
+    #top {
+      visibility: hidden;
+      
+      position: absolute;
+      top: 0;
+      left: -100vw;
+    }
+
+    header {
+      background-color: #DDD;
+      /* position: fixed; */
+      position: sticky;
+      top: 0; 
+      right: 0;
+      left: 0;
+       z-index: 1;
+    }
+
+    .outer {
+      border: 2px solid red;
+      padding: 10px;
+      margin: 20px;
+      
+    }
+
+    .inner {
+      border: 2px solid blue;
+      
+      padding: 10px;
+      width: 200px;
+    }
+
+    .inner span {
+      border: 2px solid green;
+      padding: 10px;
+    }
+
+     main {
+      margin-top: 125px;
+      position: relative;
+    }
+
+    article {
+      background-color: #CCC;
+      margin: 30px;
+      padding: 10px;
+    }
+
+     article p::first-letter {
+      float: left;
+      font-size: 3rem;
+      padding-right: 5px;
+    } 
+
+    article h1,
+    article h2 {
+      background-color: #333;
+      color: #FFF;
+      position: sticky;
+      top: 125px;
+    } 
+   
+  </style>
+</head>
+
+<body>
+  <div id="top">Top</div>
+  <header>
+    <div class="logo"><img src="img/brick.jpg"></div>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2
+        <ul>
+          <li>Item 2.1</li>
+          <li>Item 2.2</li>
+          <li>Item 2.3</li>
+        </ul>
+      </li>
+      <li>Item 3</li>
+      <li>Item 4
+        <ul>
+          <li>Item 4.1</li>
+          <li>Item 4.2</li>
+          <li>Item 4.3</li>
+          <li><a href="https://ncsu.edu">Visit NCSU</a></li>
+        </ul>
+      </li>
+      <li>Item 5</li>
+    </ul>
+  </header>
+  <main>
+    <div class="outer">
+      <div class="beforeinner">This one has some text before</div>
+      <div class="inner">Some <span>other content</span></div>
+      <div class="afterinner">And also some text after it</div>
+    </div>
+    <aside>
+      <h1>Table of Contents</h1>
+      <ol>
+        <li><a href="#lipsum2">Lorem ipsum 2</a></li>
+        <li><a href="#lipsum21">Lorem ipsum 2.1</a></li>
+        <li><a href="#lipsum22">Lorem ipsum 2.2</a></li>
+        <li><a href="#lipsum3">Lorem ipsum 3</a></li>
+        <li><a href="#lipsum31">Lorem ipsum 3.1</a></li>
+        <li><a href="#lipsum32">Lorem ipsum 3.2</a></li>
+      </ol>
+    </aside>
+    <article>
+      <h1 id="lipsum2">Lorem ipsum 2</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in tempus turpis. Donec sit amet diam eu
+        mauris
+        eleifend blandit rutrum fermentum neque. Suspendisse consequat eros tincidunt nulla mattis, at hendrerit lorem
+        rhoncus. In a consequat est, et varius orci. Etiam risus ligula, fermentum nec lorem eu, elementum commodo
+        nunc.
+        Aenean mollis nibh tellus, et condimentum nisl ullamcorper id. Mauris sit amet vehicula enim, vel luctus
+        tellus.
+        Proin quis efficitur massa. Nam neque lacus, pulvinar quis suscipit vel, iaculis consequat ipsum. Morbi
+        tincidunt
+        dapibus pharetra. Nulla fringilla, ex quis mollis interdum, nisi lectus lacinia nunc, non aliquet felis quam
+        eu
+        nisl. Integer ut sapien a sapien vehicula posuere porta rhoncus nisl.</p>
+      <div><a href="#top">Back to top</a></div>
+      <h2 id="lipsum21">Lorem ipsum 2.1</h2>
+      <p>Aenean dui tellus, gravida ut ultrices vitae, pretium vitae massa. Pellentesque habitant morbi tristique
+        senectus
+        et netus et malesuada fames ac turpis egestas. Mauris vel consectetur sem. Aenean semper magna metus, nec
+        elementum
+        quam cursus a. Fusce eu neque eros. Phasellus id tellus ultricies, ultricies neque vel, tempus est. Vestibulum
+        ac
+        lorem ut dui posuere euismod eu vel orci. In leo nisl, pretium quis eleifend nec, semper vel nisl. Donec quis
+        est
+        venenatis, iaculis turpis in, tempus est. Etiam euismod suscipit urna, ac condimentum odio fermentum eu. Fusce
+        turpis elit, mattis eget turpis vitae, semper vulputate velit. Integer purus quam, placerat et varius vitae,
+        commodo
+        et lectus. Integer eget vehicula enim. Pellentesque in finibus lacus. Nulla vitae augue ut mauris ullamcorper
+        consectetur a sit amet sem.</p>
+
+      <p>Proin porta lobortis eros, in ornare ex mollis at. Vestibulum vulputate venenatis urna, id congue elit
+        sagittis
+        at.
+        Maecenas ipsum sapien, vehicula at fringilla a, aliquam sit amet nunc. Nam ac gravida metus. Sed posuere erat
+        non
+        neque aliquet imperdiet. Aenean ut scelerisque erat. Donec neque eros, elementum in sem sit amet, tempus
+        pellentesque ipsum.</p>
+      <div><a href="#top">Back to top</a></div>
+      <h2 id="lipsum22">Lorem ipsum 2.2</h2>
+      <p>Mauris at nibh urna. Sed eros libero, gravida vehicula nulla vitae, vehicula gravida neque. Vestibulum a
+        pharetra
+        mauris, id congue tortor. Nulla dapibus facilisis arcu, nec faucibus turpis. Suspendisse pretium ligula
+        turpis,
+        vel
+        rutrum neque auctor non. Sed sed metus mi. Praesent a lorem nibh. Vestibulum ante ipsum primis in faucibus
+        orci
+        luctus et ultrices posuere cubilia curae; Nulla venenatis elementum lacus, non congue dui aliquet vel.
+        Interdum
+        et
+        malesuada fames ac ante ipsum primis in faucibus. Mauris ligula lacus, dapibus vel augue vel, vulputate
+        venenatis
+        urna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+      <p>Maecenas egestas fringilla lectus, imperdiet finibus est interdum in. Cras ut sem sem. Etiam sed lorem nisi.
+        In
+        consequat congue massa nec semper. Sed a pulvinar nisi. Aliquam auctor, purus id suscipit vestibulum, lacus
+        urna
+        fringilla justo, sit amet congue nisl dui eu nisi. Integer sed quam ut risus auctor malesuada in eget mi.
+        Aenean
+        ut
+        massa rutrum nibh rutrum dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+        cubilia
+        curae;</p>
+      <div><a href="#top">Back to top</a></div>
+    </article>
+
+
+    <article>
+      <h1 id="lipsum3">Lorem ipsum 3</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in tempus turpis. Donec sit amet diam eu
+        mauris
+        eleifend blandit rutrum fermentum neque. Suspendisse consequat eros tincidunt nulla mattis, at hendrerit lorem
+        rhoncus. In a consequat est, et varius orci. Etiam risus ligula, fermentum nec lorem eu, elementum commodo
+        nunc.
+        Aenean mollis nibh tellus, et condimentum nisl ullamcorper id. Mauris sit amet vehicula enim, vel luctus
+        tellus.
+        Proin quis efficitur massa. Nam neque lacus, pulvinar quis suscipit vel, iaculis consequat ipsum. Morbi
+        tincidunt
+        dapibus pharetra. Nulla fringilla, ex quis mollis interdum, nisi lectus lacinia nunc, non aliquet felis quam
+        eu
+        nisl. Integer ut sapien a sapien vehicula posuere porta rhoncus nisl.</p>
+      <div><a href="#top">Back to top</a></div>
+      <h2 id="lipsum31">Lorem ipsum 3.1</h2>
+      <p>Aenean dui tellus, gravida ut ultrices vitae, pretium vitae massa. Pellentesque habitant morbi tristique
+        senectus
+        et netus et malesuada fames ac turpis egestas. Mauris vel consectetur sem. Aenean semper magna metus, nec
+        elementum
+        quam cursus a. Fusce eu neque eros. Phasellus id tellus ultricies, ultricies neque vel, tempus est. Vestibulum
+        ac
+        lorem ut dui posuere euismod eu vel orci. In leo nisl, pretium quis eleifend nec, semper vel nisl. Donec quis
+        est
+        venenatis, iaculis turpis in, tempus est. Etiam euismod suscipit urna, ac condimentum odio fermentum eu. Fusce
+        turpis elit, mattis eget turpis vitae, semper vulputate velit. Integer purus quam, placerat et varius vitae,
+        commodo
+        et lectus. Integer eget vehicula enim. Pellentesque in finibus lacus. Nulla vitae augue ut mauris ullamcorper
+        consectetur a sit amet sem.</p>
+
+      <p>Proin porta lobortis eros, in ornare ex mollis at. Vestibulum vulputate venenatis urna, id congue elit
+        sagittis
+        at.
+        Maecenas ipsum sapien, vehicula at fringilla a, aliquam sit amet nunc. Nam ac gravida metus. Sed posuere erat
+        non
+        neque aliquet imperdiet. Aenean ut scelerisque erat. Donec neque eros, elementum in sem sit amet, tempus
+        pellentesque ipsum.</p>
+      <div><a href="#top">Back to top</a></div>
+      <h2 id="lipsum32">Lorem ipsum 3.2</h2>
+      <p>Mauris at nibh urna. Sed eros libero, gravida vehicula nulla vitae, vehicula gravida neque. Vestibulum a
+        pharetra
+        mauris, id congue tortor. Nulla dapibus facilisis arcu, nec faucibus turpis. Suspendisse pretium ligula
+        turpis,
+        vel
+        rutrum neque auctor non. Sed sed metus mi. Praesent a lorem nibh. Vestibulum ante ipsum primis in faucibus
+        orci
+        luctus et ultrices posuere cubilia curae; Nulla venenatis elementum lacus, non congue dui aliquet vel.
+        Interdum
+        et
+        malesuada fames ac ante ipsum primis in faucibus. Mauris ligula lacus, dapibus vel augue vel, vulputate
+        venenatis
+        urna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+      <p>Maecenas egestas fringilla lectus, imperdiet finibus est interdum in. Cras ut sem sem. Etiam sed lorem nisi.
+        In
+        consequat congue massa nec semper. Sed a pulvinar nisi. Aliquam auctor, purus id suscipit vestibulum, lacus
+        urna
+        fringilla justo, sit amet congue nisl dui eu nisi. Integer sed quam ut risus auctor malesuada in eget mi.
+        Aenean
+        ut
+        massa rutrum nibh rutrum dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+        cubilia
+        curae;</p>
+      <div><a href="#top">Back to top</a></div>
+    </article>
+  </main>
+  <footer>
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user profile</title>
+    <link rel="stylesheet" href="./css/mainpage.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg   ">
+            <div class="container-fluid">
+              <div class="d-flex align-items-center">
+                <a class ='image-logo' href="/mainpage">
+                  <img src="./img/howler_logo.jpg" alt="logo" class="img-fluid" id="custom-logo-size">
+                </a>
+                <span id ='title' class="ms-2">Howler</span>
+              </div>
+              
+              <div class="ms-auto" id="username-avatar">
+                  <span id="username"></span>
+                  <div class="dropdown">
+                    <span id="avatar" data-bs-toggle="dropdown" aria-expanded="false"></span>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item log-out" href="#">Log Out</a></li>
+                    </ul>
+                  </div>
+              
+              </div>
+                
+               
+                
+            </div>
+        </nav>
+    </header>
+    <!-- this will contain the user clicked info
+      avatar, first name, last name, username, and button to follow or unfollow
+    -->
+    <div class ='profile-info'>
+      <div class="i d-flex justify-content-between align-items-center ">
+        <div class="d-flex align-items-center" id ='info-pro'>
+        </div>
+        <button type= 'submit' class="btn btn-primary" id="followBtn">follow or unfollow</button>
+
+      </div>
+    </div>  
+    <main>
+
+      <section class='profile-followers'>
+        <div class="d-flex justify-content-between align-items-center">
+            <h4>Follows:</h4>
+            <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton"  aria-expanded="false">
+        </div>
+        <!-- Initially hidden profile options -->
+        <div id="profileOptions" class="profile-options d-none">
+            
+        </div>
+      </section>
+      <section id="howls">
+      <h2>Howls</h2>
+      </section>
+    </main>
+    <script src="./js/profile.js" type="module"></script>
+</body>
+</html>

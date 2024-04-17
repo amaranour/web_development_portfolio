@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Demo</title>
+  <style>
+    .wrapper div {
+      background-color: #EEE;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .wrapper {
+      background-color: #999;
+      padding: 5px;
+
+      display: grid;
+      gap: 10px;
+
+      grid-template-columns: 1fr 1fr 1fr; */
+       grid-template-rows: 1fr 1fr 1fr;
+
+       
+    }
+
+    .one {
+      grid-column: 1 / 4;
+      grid-row: 1;
+    }
+    .two {
+      grid-row: 2 / 4;
+      
+    }
+    .three {
+      grid-column: 3;
+    }
+    .four {
+      grid-row: 2 / 4;
+      
+    }
+    .five {
+      grid-column: 3/4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="one">One</div>
+    <div class="two">Two</div>
+    <div class="three">Three</div>
+    <div class="four">Four</div>
+    <div class="five">Five</div>
+  </div>
+
+</body>
+
+</html>

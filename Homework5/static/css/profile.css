@@ -1,0 +1,84 @@
+h2 {
+    
+    
+    margin-left: 270px;
+
+}
+
+.profile-followers {
+    position: relative; /* Needed for absolute positioning context */
+    margin-left: 270px;
+    margin-right: 270px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 4px solid black;
+}
+
+#profileOptions img {
+   
+    border-radius: 50%;
+    width: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: blue;
+    
+    
+}
+
+#f, #l {
+    font-weight: bold;
+}
+
+#avatar {
+    border-radius: 50%;
+    width: 70px;
+    margin-bottom: 10px;
+    margin-right: 40px;
+    background-color: blue;
+}
+
+@media (max-width: 600px) {
+    h2{
+        margin-left: 15px;
+    }
+    .profile-followers {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .profile-info .i {
+       /**I want the element to be positioned from left side to right  */
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-info .i #info-pro {
+        margin-bottom: 15px; /* Adds some space between the user info and the follow button */
+    }
+
+    .profile-info img {
+        /* put the image in the left */
+        
+
+       margin-right: 500px;
+        max-width: 50px; /* Adjust the avatar size for mobile */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space between the image and the name */
+
+    }
+
+    .profile-info #followBtn {
+        /* put the button in the right */
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+.profile-info{
+    margin-left: 270px;
+    margin-right: 270px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    
+}

@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9; /* Light green background */
+    color: #388e3c; /* Dark green text */
+    text-align: center;
+    padding: 50px;
+}
+.message {
+    margin-top: 50px;
+    font-size: 24px;
+}

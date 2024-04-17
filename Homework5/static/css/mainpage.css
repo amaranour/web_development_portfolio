@@ -1,0 +1,53 @@
+/* <div class ='k'>
+        <span id="header"> Home Page</span>
+        <a href="#" id="logout">Log Out</a>
+        
+    </div>
+       */
+
+/* have the title and log out as a header put the title in the 
+middle and log out link to the right */
+
+.k{
+    background-color: aqua;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    height: 60px;
+    
+}
+
+
+
+#logout{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    
+   
+    
+}
+
+.container {
+   
+    
+   /* put the text in the middle */
+    margin-top: 100px ;
+    border: 1px solid black;
+    padding-bottom: 80px;
+    padding-top: 50px;
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 100px;
+}
+
+#user-info img 
+{
+    background-color: blue;
+    border-radius: 50%;
+    
+    
+
+  }

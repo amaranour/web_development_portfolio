@@ -1,0 +1,214 @@
+
+header {
+
+    background-color: rgb(205, 197, 197);
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  body {
+    font-size: 16px; /* Base font size */
+}
+
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+  nav {
+    flex-grow: 1;
+    text-align:center;
+  }
+  nav h1 {
+    margin: auto;
+  }
+  
+  .howling-box {
+    align-items: center;
+    width: 90%; /* More flexible for smaller screens */
+    max-width: 1000px; /* Maximum width */
+    margin: 10px auto; /* Center the box */
+    padding: 10px;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+input, #howl-input, .form-control {
+    width: 100%; /* Ensure inputs don't overflow */
+    box-sizing: border-box;
+}  
+
+nav img{
+  
+    width: 40px;
+    height: 40px;
+    
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+    margin-left: 600px;
+
+
+}
+
+#title {
+    
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+#username-avatar{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+}
+#avatar img{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+
+}
+
+input {
+    width: 200px;
+    height: 50px;
+   
+    font-weight: bold;
+    background-color: aquamarine;
+    border-radius: 5px;
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #000000; 
+    box-sizing: border-box; 
+    position: relative;
+}
+
+article {
+   
+    border: 3px solid gray;
+    padding: 10px;
+    margin-left: 270px;
+    margin-right: 270px;
+    margin-top: 10px;
+    margin-bottom : 10px;
+    
+    
+  }
+  .article-header {
+    display: inline-flex  ; /* Use flexbox for alignment */
+
+    
+  }
+
+  .article-header {
+    align-items: center;
+  }
+  #username{
+    
+    color:rgb(137, 126, 126);
+  }
+  #text{
+    font-weight: bold;
+  }
+
+  
+  .article-info img {
+    width: 40px;  
+    height: 40px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    background-color: blue; 
+    display: block; 
+}
+
+  #firstname, #lastname{
+    font-weight: bold;
+  }
+  #imageavatarlink{
+    cursor :pointer;
+  }
+  .aricle-author{
+    font-weight: bold;
+  }
+  
+  .article-info span {
+    white-space: nowrap; /* Keeps the text from breaking */
+  }
+  
+  .article-date {
+    white-space: nowrap;
+    
+  }
+  
+  /* Additional styling to visually distinguish parts of the article */
+  .article-info span:not(:last-child)::after {
+    
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .howling-box, article {
+        width: 100%; /* Ensures matching widths */
+        margin: 15px 0; /* Uniform margin */
+        padding: 10px; /* Adjust padding if needed */
+    }
+    nav img{
+  
+      width: 40px;
+      height: 40px;
+      
+      margin: auto;
+      display: block;
+      border-radius: 50%;
+      margin-left: 10px;
+  
+  
+  }
+
+    article{
+      
+      margin-left: 10px;
+      margin-right: 20px;
+      width:95%;
+    }
+
+    .article-header {
+        display: flex; /* Use flexbox for alignment */
+        justify-content: space-between; /* Ensures items are spaced out */
+        flex-wrap: wrap; /* Allows items to wrap if space is insufficient */
+    }
+
+    .article-info {
+        display: flex; /* Aligns items inline */
+        flex-grow: 1; /* Allows the container to grow */
+        justify-content: flex-start; /* Aligns items to the start */
+        flex-wrap: wrap; /* Allow the items to wrap */
+        gap: 2px; /* Adjust the gap as necessary */
+    }
+
+    .article-info span {
+        font-size: 0.75rem; /* Reduces font size to fit content */
+    }
+
+    .article-date {
+        white-space: nowrap; /* Ensures the date stays on one line */
+        font-size: 0.75rem; /* Ensures the date's font size is reduced */
+        align-self: center; /* Aligns the date vertically */
+    }
+
+    /* Adjust the avatar size within the article */
+    .article-info img {
+        width: 20px; /* Adjust the width as needed */
+        height: 20px; /* Adjust the height as needed */
+        margin-right: 5px; /* Adds a margin to the right of the avatar */
+    }
+}

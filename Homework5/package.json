@@ -1,0 +1,19 @@
+{
+  "name": "homework5",
+  "version": "1.0.0",
+  "description": "a challenge I encountered was appending the new howls posted to the timeline and keeping the order right. combining howls posted by followers and the user because I have two end points one to feth the howls of the user followers and one to fetch the howls of the user. I used  promise.all and call the two api endpoints and sort them in descending order.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.1",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.0"
+  }
+}

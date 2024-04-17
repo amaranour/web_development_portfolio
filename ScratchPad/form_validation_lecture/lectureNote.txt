@@ -1,0 +1,21 @@
+different way to validate 
+    - client server validation:
+        * validate html form (Borwser Built-in validation)
+            + spectify different type of input  <input type="email">  only email type is allowed
+            + adding required attribute to the form will make the element mandatory to be filled 
+            + you can specify the attribute minlength and maxlength to set the length of the text
+            + min or max for number input type 
+            + you can set the pattern to math what you want 
+            the browser will prevent the form from submission if validation fails
+                -  to tell the user that their form contains wrong input type, we can use css to visually show the customer 
+                input:required:invalid
+                :valid 
+                :required 
+                - we can use javascipt. then form will catch the excpetion when it is about to be submitted
+                form.addEventListener('submit', (e) => {
+ ...
+                        if(validationFails) {
+                            // prevent it from doing its befault behavior 
+                            e.preventDefault();
+                        }
+                });

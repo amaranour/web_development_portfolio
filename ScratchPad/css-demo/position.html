@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Flexbox align 0 — starting code</title>
+        <style>
+            html {
+                font-family: sans-serif;
+            }
+
+            body {
+                width: 70%;
+                max-width: 960px;
+                margin: 20px auto;
+            }
+
+            button {
+                font-size: 18px;
+                line-height: 1.5;
+                width: 15%;
+            }
+
+            div {
+                height: 100px;
+                border: 1px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: space-between; /* Updated */
+                flex-direction: column;
+            }
+
+            /* Added */
+            .first-button {
+                margin-left: 0;
+            }
+
+            /* Added */
+            .last-button {
+                margin-right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <button class="first-button">Smile</button>
+            <button>Laugh</button>
+            <button>Wink</button>
+            <button>Shrug</button>
+            <button class="last-button">Blush</button>
+        </div>
+    </body>
+</html>
