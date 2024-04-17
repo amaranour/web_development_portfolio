@@ -1,0 +1,15 @@
+{
+  "name": "csc342-2024spring-namara",
+  "version": "1.0.0",
+  "description": "NourEddine Amara\r ## My Portfolio\r | Assignment  |\r | ------------- |\r |[Homework 0](https://github.ncsu.edu/engr-csc342/csc342-2024Spring-namara/blob/main/Homework0/README.md)  |\r |[Homework 1](https://github.ncsu.edu/engr-csc342/csc342-2024Spring-namara/tree/main/Homework1)|\r |[Homework 2](https://github.ncsu.edu/engr-csc342/2024Spring-Course/blob/main/Homework/Homework2.md)|\r |[Homework3](https://github.ncsu.edu/engr-csc342/2024Spring-Course/blob/main/Homework/Homework3.md)|",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
